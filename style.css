@@ -1,0 +1,341 @@
+/* ページ全体 */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Yu Gothic", sans-serif;
+    background-color: #faf8f2;
+    color: #4b463d;
+    line-height: 1.8;
+}
+
+/* ヘッダー */
+header {
+    background-color: #fff;
+    padding: 20px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+header h1 {
+    color: #687c55;
+    font-size: 24px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #4b463d;
+    margin-left: 20px;
+    font-size: 14px;
+}
+
+/* メインビジュアル */
+.hero {
+    text-align: center;
+    padding: 130px 20px;
+    background:
+        linear-gradient(
+            rgba(250, 248, 242, 0.65),
+            rgba(233, 237, 223, 0.85)
+        ),
+        linear-gradient(135deg, #b9c9a5, #e8dfc9, #c4d0ad);
+    color: #4b5941;
+}
+
+.hero-label {
+    display: inline-block;
+    font-size: 14px;
+    letter-spacing: 3px;
+    color: #788c65;
+    margin-bottom: 10px;
+}
+
+.hero h2 {
+    font-size: 40px;
+    color: #526746;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 35px;
+}
+
+/* ボタン */
+.btn {
+    display: inline-block;
+    background-color: #788c65;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #596c49;
+}
+
+/* 各セクション */
+section:not(.hero) {
+    padding: 70px 10%;
+}
+
+section h2 {
+    text-align: center;
+    color: #687c55;
+    font-size: 28px;
+    margin-bottom: 35px;
+}
+
+/* サービスカード */
+.cards {
+    display: flex;
+    gap: 25px;
+}
+
+.card {
+    flex: 1;
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+}
+
+.card h3 {
+    color: #788c65;
+}
+
+/* 1日の流れ */
+.timeline {
+    max-width: 600px;
+    margin: auto;
+}
+
+.timeline p {
+    background-color: white;
+    padding: 15px 25px;
+    margin: 12px 0;
+    border-left: 5px solid #9aab83;
+    border-radius: 5px;
+}
+
+/* お問い合わせ */
+#contact {
+    text-align: center;
+    background-color: #e9eddf;
+}
+
+/* フッター */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #687c55;
+    color: white;
+}
+
+/* スマホ対応 */
+@media (max-width: 700px) {
+    header {
+        flex-direction: column;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    nav a {
+        margin: 0;
+    }
+
+    .hero h2 {
+        font-size: 26px;
+    }
+
+    .cards {
+        flex-direction: column;
+    }
+
+    section:not(.hero) {
+        padding: 50px 6%;
+    }
+}
+
+section[id] {
+    scroll-margin-top: 100px;
+}
+
+.access-box {
+    max-width: 600px;
+    margin: auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+}
+
+.access-box p {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+.contact-box {
+    max-width: 500px;
+    margin: 30px auto 0;
+    padding: 35px;
+    background-color: white;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+}
+
+.contact-label {
+    color: #687c55;
+    font-weight: bold;
+}
+
+.contact-tel {
+    font-size: 28px;
+    font-weight: bold;
+    color: #526746;
+}
+
+.contact-note {
+    font-size: 13px;
+    margin-bottom: 25px;
+}
+
+.mail-btn {
+    background-color: #b49a75;
+    margin-top: 12px;
+}
+
+.mail-btn:hover {
+    background-color: #967b58;
+}
+
+.hero-image {
+    max-width: 850px;
+    height: 250px;
+    margin: 35px auto 0;
+    border-radius: 20px;
+
+    background: linear-gradient(
+        135deg,
+        #c6d2b5,
+        #e8dfc9,
+        #a9b994
+    );
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image p {
+    color: #526746;
+    font-size: 16px;
+}
+
+.faq-box {
+    max-width: 750px;
+    margin: 20px auto;
+    padding: 20px 25px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+}
+
+.faq-box summary {
+    color: #687c55;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.faq-box p {
+    margin-bottom: 0;
+    padding-top: 10px;
+}
+
+#top-button {
+    display: none;
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    background-color: #788c65;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero h2 {
+    animation: fadeIn 1.2s ease;
+}
+
+.hero-label {
+    animation: fadeIn 1s ease;
+}
+
+.hero p {
+    animation: fadeIn 1.5s ease;
+}
+nav a {
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #9aab83;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo span {
+    font-size: 30px;
+    color: #788c65;
+}
+
+/* スマホでのメニュー移動位置を調整 */
+@media (max-width: 700px) {
+    section[id] {
+        scroll-margin-top: 150px;
+    }
+}
